@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="{% static 'img/e.png' %}" type="image/png" sizes="16x16">
+
+  {% block title %}<title>hypercube | A place to find books you need</title>{% endblock %}
+
+  {% block head %}
+  {% endblock %}
+
+</head>
+<body>
+
+  {% block content %}
+  {% endblock %}
+
+  <footer>
+    <nav>
+      <a href="{% url 'policy' %}">Usage Policy</a>
+      |
+      <a href="{% url 'about' %}">About</a>
+      |
+      <a href="{% url 'contact' %}">Contact Us</a>
+      |
+      <a href="{% url 'contact' %}">Send Feedback</a>
+    </nav>
+  </footer>
+
+  {% block js %}
+    <script src="{% static 'js/main.js' %}"></script>
+  {% endblock %}
+
+</body>
+</html>

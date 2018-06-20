@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}<title>hypercube | Search - {{ search_query }}</title>{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include "partials/header.html" %}
+
+<div class="page_heading">
+	<p><b>Search results: {{search_query}}</b> (approx. {{results_count}} found)</p>
+</div>
+
+{% if books %}
+<table>
+	<tr>
+		<th>Catagory</th>
+		<th>Title</th>
+		<th>Author</th>
+		<th>Size</th>
+		<th>Download Link</th>
+	</tr>
+  	{% for book in books %}
+	<tr>
+		<td>{{book.category}}</td>
+		<td>{{book.title}}</td>
+		<td>{{book.author}}</td>
+		<td>{{book.size}}</td>
+		<td><a href="{{book.download_link}}" title="Download">Download</a>
+		</td>
+	</tr>
+  	{% endfor %}
+</table>
+<div class="pagination"> <span class="step-links">
+    {% if books.has_previous %}
+      <a href="?page=1&amp;search_query={{ search_query }}">&laquo; first</a>
+      <a href="?page={{ books.previous_page_number }}&amp;search_query={{ search_query }}">previous</a>
+    {% endif %}
+
+    <span class="current">
+        Page {{ books.number }} of {{ books.paginator.num_pages }}.
+    </span>
+
+  	{% if books.has_next %} <a href="?page={{ books.next_page_number }}&amp;search_query={{ search_query }}">next</a>
+  	<a href="?page={{ books.paginator.num_pages }}&amp;search_query={{ search_query }}">last &raquo;</a>
+  	{% endif %}</span>
+</div>
+
+{% else %}
+<div style="text-align:center;">
+	<h2>Nothing found :(</h2>
+	<p>We do not have this book in our database right now. Try later.</p>
+</div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}<title>hypercube | About</title>{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include "partials/header.html" %}
+
+<div class="page_heading">
+	<p>
+		<b>About</b>
+	</p>
+</div>
+
+<div class="main_content">
+	<p>"hypercube" is a search engine that (in a reliable way) enables people to search for download links for various files from all around the internet. We provide a search interface that can be used just like any other search engine interface but rather than providing people with links to other sites (what Google does) we directly provide them with download links.</p>
+	<p>All the links that we have are not our own. Technically speaking, we scrape these links from a range of different websites using our webscrapers and create a database on our servers for them. If you own any of the sites and want us to remove any copyrighted material or link you can contact us at given email.</p>
+	<p style="text-align:center;"><b>hypercubemail@gmail.com</b>
+	</p>
+	<p>Our mission is to build the world's largest database (and of course an efficienct search engine) for files and their direct download links. In this process of centralization, it's ironical that we don't like centralization of information (we are happy to tell you about that). So if anyone has an idea to do something with this information, using it in projects, helping us in our mission or what else, you can contact us &amp; we surely can have a talk.</p>
+	<p>To contact the "hypercube" <a href="{% url 'contact' %}">click here</a>.</p>
+	<p>Using the site is free of charge for individuals however there are some restrictions. Please see the <a href="{% url 'policy' %}">policy page</a>.</p>
+</div>
+{% endblock %}

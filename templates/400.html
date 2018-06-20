@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}<title>Page not found - Error 400</title>{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include "partials/header.html" %}
+
+<div class="page_heading">
+	<p>
+		<b>Error 400</b>
+	</p>
+</div>
+
+<div class="main_content">
+  <h3>Page not found</h3>
+  <p>It's not you, it's this link (it appears to be broken).</p>
+</div>
+{% endblock %}

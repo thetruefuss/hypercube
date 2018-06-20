@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}<title>Access denied/fobidden - Error 403</title>{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include "partials/header.html" %}
+
+<div class="page_heading">
+	<p>
+		<b>Error 403</b>
+	</p>
+</div>
+
+<div class="main_content">
+  <h3>Access denied/fobidden</h3>
+  <p>The page or resource you were trying to reach is absolutely forbidden for some reason.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<header>
+	<h1><a href="{% url 'home' %}"><img src="{% static 'img/e.png' %}" width="80px" height="80px"></a></h1>
+	<div id="search_box">
+		<form action="{% url 'search' %}" name="q" method="get">
+			<p>
+				<input type="search" name="search_query" placeholder="Search eBooks" value="{{ search_query }}" required>
+				<button type="submit">eBooks Search</button>
+			</p>
+			<p class="filters">
+				<label for="all" title="All" accesskey="a">
+					<input id="all" onclick="setAll();" type="checkbox" checked>All</label>
+				<label for="technology" title="Technology" accesskey="t">
+					<input name="technology" id="technology" onclick="rmAll();" type="checkbox">Technology</label>
+				<label for="web" title="Web development" accesskey="w">
+					<input name="web" id="web" onclick="rmAll();" type="checkbox">Web development</label>
+				<label for="hacking" title="Hacking" accesskey="h">
+					<input name="hacking" id="hacking" onclick="rmAll();" type="checkbox">Hacking</label>
+				<label for="programming" title="Programming" accesskey="p">
+					<input name="programming" id="programming" onclick="rmAll();" type="checkbox">Programming</label>
+				<label for="software" title="Software" accesskey="s">
+					<input name="software" id="software" onclick="rmAll();" type="checkbox">Software</label>
+				<label for="other" title="Other" accesskey="o">
+					<input name="other" id="other" onclick="rmAll();" type="checkbox">Other</label>
+			</p>
+		</form>
+	</div>
+</header>

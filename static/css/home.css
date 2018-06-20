@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash);
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px
+}
+.main {
+	display: block;
+	margin: 0 auto 20px auto;
+	text-align: center
+}
+.main h1 {
+	margin-bottom: 0
+}
+.main h1 a {
+	margin: 0 auto;
+	display: block;
+	border: 0;
+	width: 220px;
+	height: 220px;
+	outline: none!important
+}
+.main h1#e {
+	margin: 0;
+	font-family: 'Berkshire Swash', cursive
+}
+form p#inp input[type="search"] {
+	padding: 5px;
+	width: 550px
+}
+footer {
+	margin: 5em auto;
+	text-align: center
+}
+footer nav {
+	display: block
+}
+footer nav a {
+	color: #009;
+	text-decoration: none;
+	border-bottom: 1px dotted #000
+}
+footer nav a:hover {
+	border-bottom: 1px solid #009
+}
