@@ -1,7 +1,7 @@
 # hypercube
 
 hypercube is a search interface for searching IT ebooks built with Python using the Django Web Framework.
-Get the books crawler at [https://github.com/thetruefuss/books-crawler](https://github.com/thetruefuss/books-crawler)
+Get the books crawler at [https://github.com/thetruefuss/books-scraper](https://github.com/thetruefuss/books-scraper)
 
 ### Installation Guide
 
